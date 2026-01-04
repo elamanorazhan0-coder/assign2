@@ -1,8 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        Servicable[] serviceQueue = new Servicable[2];
 
+        serviceQueue[0] = new Car("Tesla Model 3", 2022, 45000, 4);
+        serviceQueue[1] = new Bus("Volvo 9700", 2019, 120000, 50);
 
-void main() {Car myCar = new Car("Toyota", 2020, 20000, 4);
-    Bus myBus = new Bus("Mercedes", 2015, 50000, 30);
+        for (Servicable s : serviceQueue) {
+            System.out.println("--- Starting Service ---");
 
-    System.out.println(myCar.toString());
-    System.out.println("Insurance: " + myCar.calculateInsuranceFee());
+            s.performService();
+            System.out.println("Recommended interval: " + s.getServiceIntervalKm() + " km");
+        }
+    }
 }

@@ -44,6 +44,10 @@ public abstract class Vehicle {
 
     public abstract double calculateInsuranceFee();
 
+    public abstract void performService();
+
+    public abstract int getServiceIntervalKm();
+
     @Override
     public String toString() {
         return "ID: " + id + ", Model: " + model + ", Year: " + year + ", Price: " + basePrice;
